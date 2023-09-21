@@ -1,0 +1,58 @@
+.container{
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    border: 5px solid rgb(243, 225, 186);
+}
+.lock{
+    display: grid;
+    grid-template-areas:
+        "t t t t t"
+        "img img me me me"
+        "p p p p p"
+        "gi gi gi gi gi"
+        "for for for for for"
+        "pro pro idi leg leg";
+    max-width: 1000px;
+}
+h1, h3{
+    display: grid;
+    justify-content: center;
+    grid-area: t;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', 
+    Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.container.uno{
+    grid-area:img;
+}
+.container.dos{
+    grid-area:me;
+}
+.container.tres{
+    grid-area:p;
+}
+.container.cuatro{
+    grid-area:gi;
+}
+.container.cinco{
+    grid-area:for;
+}
+.container.seis{
+    grid-area:pro;
+    justify-content: baseline;
+}
+.container.siete{
+    grid-area:idi;
+}
+.container.ocho{
+    grid-area:leg;
+}
+.cont{
+    font-family: Cambria, Cochin, 
+    Georgia, Times, 'Times New Roman', serif;
+}

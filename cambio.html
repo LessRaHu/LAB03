@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Convertidor de moneda</title>
+    <link href="estilos.css" rel="stylesheet"/>
+    <script>
+      function convertirMoneda(monto, monedaDestino) {
+        const tipoCambioDolar = 3.88;
+        const tipoCambioEuro = 4.52;
+
+        if (monedaDestino === "dolar") {
+          return monto / tipoCambioDolar;
+        } else if (monedaDestino === "euro") {
+          return monto / tipoCambioEuro;
+        } else {
+          return "Error: Moneda de destino no válida";
+        }
+      }
+
+      function convertir() {
+        const monto = parseFloat(document.getElementById("monto").value);
+        let monedaDestino;
+
+        if (document.getElementById("dolar").checked) {
+          monedaDestino = "dolar";
+        } else if (document.getElementById("euro").checked) {
+          monedaDestino = "euro";
+        }
+
+        const montoConvertido = convertirMoneda(monto, monedaDestino).toFixed(2);
+
+        // Mostrar alerta con el monto convertido
+        alert(`Usted recibirá ${montoConvertido} ${monedaDestino.toUpperCase()}`);
+
+        document.getElementById("resultado").innerHTML = montoConvertido;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Convertidor de moneda</h1>
+    <form>
+      <label for="monto">Monto en soles:</label>
+      <input type="number" id="monto" name="monto"><br>
+
+      <label>Convertir a:</label>
+      <label><input type="radio" id="dolar" name="monedaDestino" value="dolar"> Dólares</label>
+      <label><input type="radio" id="euro" name="monedaDestino" value="euro"> Euros</label><br>
+
+      <button type="button" onclick="convertir()">Convertir</button>
+    </form>
+
+    <div id="resultado"></div>
+  </body>
+</html>
+
+

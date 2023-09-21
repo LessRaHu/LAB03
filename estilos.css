@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="number"],
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #5b5f63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0069d9;
+  }
+
+  #resultado {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  h1{
+    display: grid;
+    justify-content: center;
+  }
